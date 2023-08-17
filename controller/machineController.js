@@ -40,7 +40,7 @@ exports.getMachineUtilization = async (req, res) => {
             //Get response from sql based on query created
             const result = await sql.query(query, { machineName, startDate, endDate, offset, pageSize });
 
-            if (result.recordset.length === 0) {
+            if (result.recordset.length === 0 || (result.recordset[0].operationalDuration === null && result.recordset[0].nonOperationalDuration === null)) {
 
                 res.status(200).json({ success: false, message: 'No records found for the given filters' });
 
