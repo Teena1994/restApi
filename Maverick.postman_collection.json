@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "4ad1700b-e207-4774-b5e9-66441d8f634c",
+		"name": "Maverick",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28785935"
+	},
+	"item": [
+		{
+			"name": "Calculate machine utilization by machine name, date filter and pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/aggregate?machine=Moulding_Geiss2&startDate=2022-06-13&endDate=2023-08-17&pagination=true&pageNumber=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"aggregate"
+					],
+					"query": [
+						{
+							"key": "machine",
+							"value": "Moulding_Geiss2"
+						},
+						{
+							"key": "startDate",
+							"value": "2022-06-13"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-08-17"
+						},
+						{
+							"key": "pagination",
+							"value": "true"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate machine utilization by machine name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/aggregate?machine=Moulding_Geiss2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"aggregate"
+					],
+					"query": [
+						{
+							"key": "machine",
+							"value": "Moulding_Geiss2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate machine utilization by date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/aggregate?startDate=2022-06-13&endDate=2023-08-17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"aggregate"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2022-06-13"
+						},
+						{
+							"key": "endDate",
+							"value": "2023-08-17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate machine utilization with pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/aggregate?pagination=true&pageNumber=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"aggregate"
+					],
+					"query": [
+						{
+							"key": "pagination",
+							"value": "true"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
